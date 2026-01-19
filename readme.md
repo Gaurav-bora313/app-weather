@@ -15,6 +15,6 @@ After that, run the main.py file in a virtual environment in which you installed
 
 If any errors occur, feel free to email me.
 
-I'm working on further improvement of this app, and make it better.
+I'm working on further improvement of the app, and make it better.
 
 The next update would focus on getting more data about the weather and improve the UI.
