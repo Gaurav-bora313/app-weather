@@ -13,7 +13,12 @@
     </form>
 
     {% if temp %}
-        <h2>Temperature: {{ temp }} °C</h2>
+        <h2> Average Temperature: {{ temp }} °C</h2>
+        <h2> Minimum Temperature: {{ min_temp }} °C</h2>
+        <h2> Maximum Temperature: {{ max_temp }} °C</h2>
+        <h2> Feels like: {{ feel_temp }} °C</h2>
+        <h2> Humidity: {{ humidity }}%</h2>
+        <h2> Status: {{ status }} </h2>
     {% elif error %}
         <h2>Error: {{ error }}</h2>
     {% endif %}

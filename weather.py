@@ -22,7 +22,32 @@ class Parameters(WeatherData):
     def __init__(self, city):
         super().__init__(city)
     
-    def getTemp(self):
+    def Temp(self):
         self.getData()
         main = self.data['main']
         return main['temp']  
+    
+    def TempFeel(self):
+        self.getData()
+        main = self.data['main']
+        return main['feels_like']
+    
+    def weatherStatus(self):
+        self.getData()
+        main = self.data['weather'][0]
+        return main['description'].capitalize()
+    
+    def minTemp(self):
+        self.getData()
+        main = self.data['main']
+        return main['temp_min']
+    
+    def maxTemp(self):
+        self.getData()
+        main = self.data['main']
+        return main['temp_max']
+    
+    def humidity(self):
+        self.getData()
+        main = self.data['main']
+        return main['humidity']
