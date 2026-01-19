@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Weather</title>
+</head>
+<body>
+    <form method="POST">
+        <input type="text" name="city" placeholder="Enter City" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    {% if temp %}
+        <h2>Temperature: {{ temp }} °C</h2>
+    {% elif error %}
+        <h2>Error: {{ error }}</h2>
+    {% endif %}
+
+</body>
+</html>
