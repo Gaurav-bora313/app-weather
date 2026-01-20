@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Weather</title>
+</head>
+<body>
+    <form method="POST">
+        <input type="text" name="city" placeholder="Enter City" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    {% if data %}
+        <h2> Average Temperature: {{ data.temp }} °C</h2>
+        <h2> Minimum Temperature: {{ data.min_temp }} °C</h2>
+        <h2> Maximum Temperature: {{ data.max_temp }} °C</h2>
+        <h2> Feels like: {{ data.feel_like }} °C</h2>
+        <h2> Humidity: {{ data.humidity }}%</h2>
+        <h2> Status: {{ data.status }} </h2>
+    {% elif error %}
+        <h2>Error: {{ error }}</h2>
+    {% endif %}
+
+</body>
+</html>
